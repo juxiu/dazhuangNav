@@ -72,36 +72,19 @@ const targetUrl = 'https://www.pnpm.cn';
 getOpenGraphData(targetUrl);
 
 const data = [
-    {
-        "title": "xxx",
-        "des": "xxx",
-        "img": "xxx",
-        "url": "xxx",
-        "tags": ["xxx", "xxx"]
-    },
-    {
-        "title": "xxx",
-        "des": "xxx",
-        "img": "xxx",
-        "url": "xxx",
-        "tags": ["xxx", "xxx"]
-    },
-    {
-        "title": "xxx",
-        "des": "xxx",
-        "img": "xxx",
-        "url": "xxx",
-        "tags": ["xxx", "xxx"]
-    },
-    {
-        "title": "xxx",
-        "des": "xxx",
-        "img": "xxx",
-        "url": "xxx",
-        "tags": ["xxx", "xxx"]
-    },
+
 ]
 
+for (let index = 0; index < 30; index++) {
+    data.push({
+        "title": "xxx",
+        "des": "xxx",
+        "img": "xxx",
+        "url": "xxx",
+        "tags": ["xxx", "xxx"]
+    })
+
+}
 
 const activeIndex = ref(0)
 </script>
@@ -126,7 +109,7 @@ const activeIndex = ref(0)
         </section>
         <n-divider />
         <section class="">
-            <n-grid :x-gap="12" :y-gap="8" :cols="6">
+            <n-grid :x-gap="40" :y-gap="30" :cols="6">
                 <n-grid-item v-for="item in data">
                     <n-card :title="item.title" class="card-custom box-shadow-custom">
                         {{ item.des }}
