@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NInput, NIcon, NButton, NDivider, NGrid, NGridItem, NCard } from "naive-ui"
+import { NInput, NIcon, NButton, NDivider, NGrid, NGridItem, NCard, NAvatar } from "naive-ui"
 import { FlashOutline } from "@vicons/ionicons5"
 import { ref } from "vue"
 
@@ -108,10 +108,14 @@ const activeIndex = ref(0)
             </n-button>
         </section>
         <n-divider />
-        <section class="">
-            <n-grid :x-gap="40" :y-gap="30" :cols="6">
+        <section class="pb-20">
+            <n-grid :x-gap="40" :y-gap="30" :cols="4">
                 <n-grid-item v-for="item in data">
                     <n-card :title="item.title" class="card-custom box-shadow-custom">
+                        <template #header-extra>
+                            <n-avatar :size="48" round
+                                src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg" />
+                        </template>
                         {{ item.des }}
                     </n-card>
                 </n-grid-item>
