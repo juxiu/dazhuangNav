@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { NInput, NIcon, NButton, NDivider, NGrid, NGridItem, NCard, NAvatar } from "naive-ui"
 import { FlashOutline } from "@vicons/ionicons5"
-import { ref } from "vue"
+import { ref,computed } from "vue"
+import {intersection} from 'lodash-es'
 
-import { useHomeStore,WebSites } from "@/store/modules/home.ts"
+import { useHomeStore,Tag } from "@/store/modules/home.ts"
 import { websiteStore } from "@/store/modules/websiteStore.ts"
-const { tags, setTags } = useHomeStore()
+const { tags } = useHomeStore()
 const { websites } = websiteStore()
 // 从其他网页获取Open Graph信息的函数
 // function getOpenGraphData(url) {
@@ -44,6 +45,17 @@ const { websites } = websiteStore()
 // }
 
 const activeIndex = ref(0)
+const activeTagId = ref('recommend')
+
+const tagChange = (index:number,tag:any)=>{
+    activeIndex.value = index
+    activeTagId.value = tag.id
+}
+const websitesComputed = computed(()=>{
+    return websites.filter((item:Tag)=>{
+        return intersection([activeTagId.value],item.tags).length>0
+    })
+})
 </script>
 
 <template>
@@ -59,15 +71,15 @@ const activeIndex = ref(0)
             </span>
         </section>
         <section>
-            <n-button :type="activeIndex == index ? 'primary' : 'default'" secondary round v-for="(tag, index) in tags"
-                :key="tag" @click="activeIndex = index" class="mr-3 mb-2" size="medium">
+            <n-button  :type="activeIndex == index ? 'primary' : 'default'" secondary round v-for="(tag, index) in tags"
+                :key="tag" @click="tagChange(index,tag)" class="mr-3 mb-2" size="medium">
                 <span class="inline-block pa-1 pt-0 pb-0">{{ tag.suffix }}&nbsp;{{ tag.name }}</span>
             </n-button>
         </section>
         <n-divider />
         <section class="pb-20">
             <n-grid :x-gap="40" :y-gap="30" :cols="4">
-                <n-grid-item v-for="item in websites">
+                <n-grid-item v-for="item in websitesComputed">
                     <a :href="item.url" target="_blank">
                     <n-card :title="item.title" class="card-custom box-shadow-custom">
                         <template #header-extra>
