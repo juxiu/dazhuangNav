@@ -16,7 +16,7 @@ export const tagsData = [
     {name:'知名博客',suffix:'📑',id:'wellKnownBlog'},
     {name:'在线影视',suffix:'🎬',id:'onlineVideo'},
     {name:'静态网页构建',suffix:'🔨',id:'staticWebTools'},
-    {name:'收藏',suffix:'💎',id:'mark'},
+    // {name:'收藏',suffix:'💎',id:'mark'},
 ]
 
 const websiteData=[
@@ -74,7 +74,7 @@ const websiteData=[
         "title": "undraw",
         "des": "插画库",
         "remarks":"",
-        "img": "",
+        "img": "https://undraw.co/favicon.ico",
         "url": "https://undraw.co/illustrations",
         "rankingIndex": 0,
         "setTop":false,
@@ -82,7 +82,7 @@ const websiteData=[
     },
     {
         "title": "devv.ai",
-        "des": "编程搜索",
+        "des": "编程搜索(目前需要科学访问)",
         "remarks":"",
         "img": "",
         "url": "https://devv.ai/zh",
@@ -94,7 +94,7 @@ const websiteData=[
         "title": "职得简历",
         "des": "用ai辅助写简历",
         "remarks":"",
-        "img": "",
+        "img": "https://ai.zhidejianli.com/favicon.ico",
         "url": "https://ai.zhidejianli.com/login?redirect=/index",
         "rankingIndex": 0,
         "setTop":false,
@@ -104,7 +104,7 @@ const websiteData=[
         "title": "ai简历",
         "des": "ai简历",
         "remarks":"",
-        "img": "",
+        "img": "https://www.elegantresume.pro/favicon.ico",
         "url": "https://www.elegantresume.pro/",
         "rankingIndex": 0,
         "setTop":false,
@@ -114,7 +114,7 @@ const websiteData=[
         "title": "算法通关手册",
         "des": "算法知识以及leetcode题解",
         "remarks":"",
-        "img": "",
+        "img": "https://algo.itcharge.cn/logo.svg",
         "url": "https://algo.itcharge.cn/Solutions/",
         "rankingIndex": 0,
         "setTop":false,
@@ -124,7 +124,7 @@ const websiteData=[
         "title": "趣站研究所",
         "des": "导航网站",
         "remarks":"",
-        "img": "",
+        "img": "https://share.hsmy.fun/logo.png",
         "url": "https://share.hsmy.fun/category/read",
         "rankingIndex": 0,
         "setTop":false,
@@ -144,7 +144,7 @@ const websiteData=[
         "title": "趣乐兔",
         "des": "资源站",
         "remarks":"",
-        "img": "",
+        "img": "https://i1.funletu.com/img/cropped-BE13fn-32x32.png",
         "url": "https://funletu.com",
         "rankingIndex": 0,
         "setTop":false,
@@ -154,7 +154,7 @@ const websiteData=[
         "title": "喜欢书签",
         "des": "导航网站",
         "remarks":"",
-        "img": "",
+        "img": "https://www.likebookmark.com/favicon.ico",
         "url": "https://www.likebookmark.com/#category-205",
         "rankingIndex": 0,
         "setTop":false,
@@ -174,13 +174,22 @@ const websiteData=[
         "title": "闲着导航",
         "des": "导航网站",
         "remarks":"",
-        "img": "",
+        "img": "https://nav.justmyfreedom.com/favicon.ico",
         "url": "https://nav.justmyfreedom.com",
         "rankingIndex": 0,
         "setTop":false,
         "tags": ["recommend"]
     },
-    
+    {
+        "title": "",
+        "des": "AI SEO标题生成器",
+        "remarks":"",
+        "img": "https://aitdk.com/favicon.ico",
+        "url": "https://aitdk.com/zh-CN",
+        "rankingIndex": 0,
+        "setTop":false,
+        "tags": ["recommend"]
+    },
 ]
 
 export const websiteStore = defineStore('website', () =>{
