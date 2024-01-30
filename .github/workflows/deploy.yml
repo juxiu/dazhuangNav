@@ -1,4 +1,4 @@
-# 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
+# 构建 Vite 站点并将其部署到 GitHub Pages 的示例工作流程
 #
 name: Deploy vue site to Pages
 
@@ -47,7 +47,7 @@ jobs:
         run: pnpm install # 或 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
-          pnpm build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+          pnpm build # 或 yarn build / npm run build
         #   touch .vitepress/dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
