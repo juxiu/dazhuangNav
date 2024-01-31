@@ -26,6 +26,9 @@ dependencies:
   unplugin-vue-components:
     specifier: ^0.26.0
     version: 0.26.0(vue@3.4.15)
+  uuid:
+    specifier: ^9.0.1
+    version: 9.0.1
   vfonts:
     specifier: ^0.0.3
     version: 0.0.3
@@ -2165,6 +2168,11 @@ packages:
       escalade: 3.1.1
       picocolors: 1.0.0
     dev: true
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: false
 
   /validator@13.11.0:
     resolution: {integrity: sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==}
