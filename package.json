@@ -15,6 +15,7 @@
     "naive-ui": "^2.37.3",
     "open-graph-scraper": "^6.3.3",
     "pinia": "^2.1.7",
+    "unplugin-vue-components": "^0.26.0",
     "vfonts": "^0.0.3",
     "vue": "^3.3.11",
     "vue-router": "4"
