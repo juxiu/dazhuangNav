@@ -1,9 +1,20 @@
 # Nuxt 3 Minimal Starter
 
+- 大类
+  - 小类 [标签][标签][标签][标签]
+  - 小类
+- 大类
+  - 小类
+  - 小类
+  
+
+菜单
+- [x] 菜单1
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
-
+ 
 Make sure to install the dependencies:
 
 ```bash

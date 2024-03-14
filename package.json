@@ -13,5 +13,11 @@
     "nuxt": "^3.10.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "date-fns-tz": "^2.0.1",
+    "naive-ui": "^2.38.1",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0"
   }
 }
