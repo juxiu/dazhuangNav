@@ -81,8 +81,7 @@ const websitesComputed = computed(()=>{
                     <a :href="item.url" target="_blank" class="decoration-none">
                         <n-card  class="card-custom box-shadow-custom">
                             <div class="flex justify-start flex-items-center">
-                                <img  v-if="item.img"  :src="item.img"  class="w-15 h-15 rd-2" alt="" srcset="">
-                                <span v-else class="text-10">😋</span>
+                                <img    :src="`https://www.google.com/s2/favicons?domain=${item.url}&sz=128`"  class="w-15 h-15 rd-2" alt="" srcset="">
                                 <div class="pl-4">
                                     <h3 class="pa-0 m-0">{{ item.title }}</h3>
                                     <div class="color-gray-500 text-sm">{{ item.des }}</div>
